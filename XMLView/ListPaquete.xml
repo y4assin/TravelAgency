@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <column name="id" display="none" order="10">
+            <widget type="text" fieldname="id" readonly="true"/>
+        </column>
+        <column name="name" display="" order="15">
+            <widget type="text" fieldname="name" maxlength="100"/>
+        </column>
+        <column name="description" display="left" order="20">
+            <widget type="textarea" fieldname="description" required="true"/>
+        </column>
+        <column name="Origen" order="30">
+            <widget type="autocomplete" fieldname="origen_id">
+                <values source="ciudades" fieldcode="idciudad" fieldtitle="ciudad"/>
+            </widget>
+        </column>
+        <column name="Destino" order="40">
+            <widget type="autocomplete" fieldname="destino_id">
+                <values source="ciudades" fieldcode="idciudad" fieldtitle="ciudad"/>
+            </widget>
+        </column>
+        <column name="Salida" display="left" order="130">
+            <widget type="date" fieldname="fecha_salida"/>
+        </column>
+        <column name="Regreso" display="left" order="140">
+            <widget type="date" fieldname="fecha_regreso"/>
+        </column>
+        <column name="Duración" display="left" order="150">
+            <widget type="number" decimal="0" fieldname="duracion_dias" />
+        </column>
+        <column name="Plazas" display="left" order="210">
+            <widget type="number" decimal="0" fieldname="plazas_disponibles" required="true"/>
+        </column>
+        <column name="Plazas reservadas" display="left" order="210">
+            <widget type="number" decimal="0" fieldname="plazas_reservadas" readonly="true"/>
+        </column>
+        <column name="status" display="left" order="215">
+            <widget type="select" fieldname="status" required="true">
+                <values title="Disponible">1</values>
+                <values title="Agotado">2</values>
+                <values title="Cancelado">3</values>
+            </widget>
+        </column>
+
+        <column name="hora_llegada" display="none" order="140">
+            <widget type="time" fieldname="hora_llegada"/>
+        </column>
+        <column name="hora_llegada_vuelta" display="none" order="150">
+            <widget type="time" fieldname="hora_llegada_vuelta"/>
+        </column>
+        <column name="hora_salida" display="none" order="160">
+            <widget type="time" fieldname="hora_salida"/>
+        </column>
+        <column name="hora_vuelta" display="none" order="170">
+            <widget type="date" fieldname="hora_vuelta"/>
+        </column>
+        <column name="precio" display="none" order="235">
+            <widget type="money" fieldname="precio" required="true"/>
+        </column>
+        <column name="creation-date" display="none" order="240">
+            <widget type="datetime" fieldname="creation_date" required="true"/>
+        </column>
+        <column name="user" order="250" display="none">
+            <widget type="select" fieldname="nick">
+                <values source="users" fieldcode="nick" fieldtile="nick"/>
+            </widget>
+        </column>
+        <column name="last-update" display="none" order="260">
+            <widget type="datetime" fieldname="last_update"/>
+        </column>
+        <column name="last-user" order="270" display="none">
+            <widget type="select" fieldname="last_nick">
+                <values source="users" fieldcode="nick" fieldtile="nick"/>
+            </widget>
+        </column>
+    </columns>
+    <rows>
+        <row type="status">
+            <option color="warning" fieldname="status" title="Agotado">2</option>
+            <option color="danger" fieldname="status" title="Cancelado">3</option>
+        </row>
+    </rows>
+</view>

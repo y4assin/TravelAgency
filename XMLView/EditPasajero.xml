@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <group name="data" numcolumns="12">
+            <column name="id" display="none" order="110">
+                <widget type="text" fieldname="id" readonly="true"/>
+            </column>
+            <column name="Tratamiento" display="left" order="120">
+                <widget type="select" fieldname="tratamiento" required="true">
+                    <values title="Sr.">Sr.</values>
+                    <values title="Sra.">Sra.</values>
+                    <values title="Srta.">Srta.</values>
+                    <values title="Dr.">Dr.</values>
+                    <values title="Dra.">Dra.</values>
+                </widget>
+            </column>
+            <column name="name" display="" order="130">
+                <widget type="text" fieldname="name" maxlength="100"/>
+            </column>
+            <column name="Apellido" display="" order="130">
+                <widget type="text" fieldname="apellido" maxlength="100"/>
+            </column>
+            <column name="Nro Pasaporte" display="left" order="140">
+                <widget type="text" fieldname="num_pasaporte" />
+            </column>
+            <column name="Validez Pasaporte" display="left" order="150">
+                <widget type="date" fieldname="validez_pasaporte"/>
+            </column>
+            <column name="Fecha nacimiento" display="left" order="160">
+                <widget type="date" fieldname="fecha_nacimiento"/>
+            </column>
+            <column name="Nacionalidad" display="left" order="170">
+                <widget type="select" fieldname="nacionalidad" required="true">
+                    <values title="Argentina">Argentina</values>
+                    <values title="Brasil">Brasil</values>
+                    <values title="Chile">Chile</values>
+                    <values title="Uruguay">Uruguay</values>
+                    <values title="Paraguay">Paraguay</values>
+                    <values title="Perú">Perú</values>
+                    <values title="Bolivia">Bolivia</values>
+                    <values title="Colombia">Colombia</values>
+                    <values title="Venezuela">Venezuela</values>
+                    <values title="España">España</values>
+                    <values title="Otro">Otro</values>
+                </widget>
+            </column>
+        </group>
+        <group name="logs" numcolumns="12" title="Auditoria">
+            <column name="creation-date" order="100">
+                <widget type="datetime" fieldname="creation_date" readonly="true" />
+            </column>
+            <column name="user" order="110">
+                <widget type="select" fieldname="nick" readonly="true">
+                    <values source="users" fieldcode="nick" fieldtile="nick" />
+                </widget>
+            </column>
+            <column name="last-update" order="120">
+                <widget type="datetime" fieldname="last_update" readonly="true"/>
+            </column>
+            <column name="last-user" order="130">
+                <widget type="select" fieldname="last_nick" readonly="true">
+                    <values source="users" fieldcode="nick" fieldtile="nick"/>
+                </widget>
+            </column>
+        </group>
+    </columns>
+</view>

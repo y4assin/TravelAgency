@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+    <column>
+        <name>creation_date</name>
+        <type>timestamp</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>description</name>
+        <type>text</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>destino_id</name>
+        <type>integer</type>
+    </column>
+    <column>
+        <name>duracion_dias</name>
+        <type>integer</type>
+    </column>
+    <column>
+        <name>fecha_salida</name>
+        <type>date</type>
+    </column>
+    <column>
+        <name>fecha_regreso</name>
+        <type>date</type>
+    </column>
+    <column>
+        <name>hora_llegada</name>
+        <type>time</type>
+    </column>
+    <column>
+        <name>hora_llegada_vuelta</name>
+        <type>time</type>
+    </column>
+    <column>
+        <name>hora_salida</name>
+        <type>time</type>
+    </column>
+    <column>
+        <name>hora_vuelta</name>
+        <type>time</type>
+    </column>
+    <column>
+        <name>id</name>
+        <type>serial</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>last_nick</name>
+        <type>character varying(50)</type>
+    </column>
+    <column>
+        <name>last_update</name>
+        <type>timestamp</type>
+    </column>
+    <column>
+        <name>name</name>
+        <type>character varying(100)</type>
+    </column>
+    <column>
+        <name>nick</name>
+        <type>character varying(50)</type>
+    </column>
+    <column>
+        <name>origen_id</name>
+        <type>integer</type>
+    </column>
+    <column>
+        <name>plazas_disponibles</name>
+        <type>integer</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>plazas_reservadas</name>
+        <type>integer</type>
+    </column>
+    <column>
+        <name>precio</name>
+        <type>double precision</type>
+    </column>
+    <column>
+        <name>status</name>
+        <type>integer</type>
+        <null>NO</null>
+    </column>
+    <constraint>
+        <name>paquetes_de_viajes_pkey</name>
+        <type>PRIMARY KEY (id)</type>
+    </constraint>
+    <constraint>
+        <name>ca_paquetes_de_viajes_ciudades_origen_id</name>
+        <type>FOREIGN KEY (origen_id) REFERENCES ciudades (idciudad) ON DELETE SET NULL ON UPDATE CASCADE</type>
+    </constraint>
+    <constraint>
+        <name>ca_paquetes_de_viajes_ciudades_destino_id</name>
+        <type>FOREIGN KEY (destino_id) REFERENCES ciudades (idciudad) ON DELETE SET NULL ON UPDATE CASCADE</type>
+    </constraint>
+    <constraint>
+        <name>ca_paquetes_de_viajes_users_last_nick</name>
+        <type>FOREIGN KEY (last_nick) REFERENCES users (nick) ON DELETE SET NULL ON UPDATE CASCADE</type>
+    </constraint>
+    <constraint>
+        <name>ca_paquetes_de_viajes_users_nick</name>
+        <type>FOREIGN KEY (nick) REFERENCES users (nick) ON DELETE SET NULL ON UPDATE CASCADE</type>
+    </constraint>
+</table>

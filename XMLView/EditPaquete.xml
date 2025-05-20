@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <group name="data" numcolumns="12" valign="bottom" title="Información del paquete">
+            <column name="id" display="none" order="180">
+                <widget type="text" fieldname="id" readonly="true"/>
+            </column>
+            <column name="name" display="" order="190">
+                <widget type="text" fieldname="name" maxlength="100"/>
+            </column>
+            <column name="Origen" order="30">
+                <widget type="autocomplete" fieldname="origen_id">
+                    <values source="ciudades" fieldcode="idciudad" fieldtitle="ciudad"/>
+                </widget>
+            </column>
+            <column name="Destino" order="40">
+                <widget type="autocomplete" fieldname="destino_id">
+                    <values source="ciudades" fieldcode="idciudad" fieldtitle="ciudad"/>
+                </widget>
+            </column>
+            <column name="Plazas" display="left" order="210">
+                <widget type="select" fieldname="plazas_disponibles" readonly="true"/>
+            </column>
+            <column name="precio" display="none" order="220">
+                <widget type="money" fieldname="precio" required="true"/>
+            </column>
+            <column name="status" display="left" order="230">
+                <widget type="select" fieldname="status" required="true">
+                    <values title="Disponible">1</values>
+                    <values title="Agotado">2</values>
+                    <values title="Cancelado">3</values>
+                </widget>
+            </column>
+        </group>
+        <group name="detalles" numcolumns="12" title="Cronograma">
+            <column name="Días de duración" display="left" order="120">
+                <widget type="number" fieldname="duracion_dias"/>
+            </column>
+            <column name="Fecha Salida" display="left" order="130" numcolumns="4">
+                <widget type="date" fieldname="fecha_salida"/>
+            </column>
+            <column name="Hora salida" display="left" order="140" numcolumns="4">
+                <widget type="time" step="60" fieldname="hora_salida"/>
+            </column>
+            <column name="Hora llegada destino" display="left" order="150">
+                <widget type="time" step="60" fieldname="hora_llegada"/>
+            </column>
+            <column name="Fecha regreso" display="left" order="160" numcolumns="4">
+                <widget type="date" fieldname="fecha_regreso"/>
+            </column>
+            <column name="Hora regreso" display="left" order="170" numcolumns="4">
+                <widget type="time" step="60" fieldname="hora_vuelta"/>
+            </column>
+            <column name="hora llegada origen" display="left" order="180" numcolumns="4">
+                <widget type="time" step="60" fieldname="hora_llegada_vuelta"/>
+            </column>
+            <column name="description" display="left" order="200" numcolumns="12">
+                <widget type="textarea" fieldname="description" required="true"/>
+            </column>
+        </group>
+        <group name="logs" numcolumns="12" title="Auditoria">
+            <column name="creation-date" order="100">
+                <widget type="datetime" fieldname="creation_date" readonly="true" />
+            </column>
+            <column name="user" order="110">
+                <widget type="select" fieldname="nick" readonly="true">
+                    <values source="users" fieldcode="nick" fieldtile="nick" />
+                </widget>
+            </column>
+            <column name="last-update" order="120">
+                <widget type="datetime" fieldname="last_update" readonly="true"/>
+            </column>
+            <column name="last-user" order="130">
+                <widget type="select" fieldname="last_nick" readonly="true">
+                    <values source="users" fieldcode="nick" fieldtile="nick"/>
+                </widget>
+            </column>
+        </group>
+    </columns>
+</view>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <column name="id" display="none" order="10">
+            <widget type="text" fieldname="id" readonly="true"/>
+        </column>
+        <column name="Paquete" display="left" order="20">
+            <widget type="autocomplete" fieldname="paquete_id" onclick="EditPaquete">
+                <values source="ta_paquetes_de_viajes" fieldcode="id" fieldtitle="name"/>
+            </widget>
+        </column>
+        <column name="title" display="" order="100">
+            <widget type="text" fieldname="name" maxlength="100"/>
+        </column>
+        <column name="description" display="left" order="120">
+            <widget type="textarea" fieldname="description" required="true"/>
+        </column>
+        <column name="creation-date" display="none" order="130">
+            <widget type="datetime" fieldname="creation_date" required="true"/>
+        </column>
+        <column name="user" order="140">
+            <widget type="select" fieldname="nick">
+                <values source="users" fieldcode="nick" fieldtile="nick"/>
+            </widget>
+        </column>
+        <column name="last-update" display="none" order="150">
+            <widget type="datetime" fieldname="last_update"/>
+        </column>
+        <column name="last-user" order="160">
+            <widget type="select" fieldname="last_nick">
+                <values source="users" fieldcode="nick" fieldtile="nick"/>
+            </widget>
+        </column>
+    </columns>
+</view>

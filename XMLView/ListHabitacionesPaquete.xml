@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <column name="id" display="none" order="110">
+            <widget type="text" fieldname="id" readonly="true"/>
+        </column>
+        <column name="Paquete" display="left" order="120">
+            <widget type="autocomplete" fieldname="paquete_id" onclick="EditPaquete">
+                <values source="ta_paquetes_de_viajes" fieldcode="id" fieldtitle="name"/>
+            </widget>
+        </column>
+        <column name="name" display="" order="120">
+            <widget type="text" fieldname="name" maxlength="130"/>
+        </column>
+        <column name="Plazas" display="center" order="140">
+            <widget type="number" fieldname="cantidad_plazas" decimal="0" required="true"/>
+        </column>
+        <column name="Cantidad Reservadas" display="center" order="140">
+            <widget type="number" fieldname="cantidad_reservada" decimal="0" required="true"/>
+        </column>
+        <column name="Cantidad disponible" display="center" order="140">
+            <widget type="number" fieldname="cantidad_disp" decimal="0" required="true"/>
+        </column>
+        <column name="Tipo Habitación" display="left" order="150">
+            <widget type="select" fieldname="tipo_habitacion" required="true">
+                <values title="Individual">1</values>
+                <values title="Doble">2</values>
+                <values title="Triple">3</values>
+                <values title="Cuádruple">4</values>
+            </widget>
+        </column>
+        <column name="Precio" display="left" order="160">
+            <widget type="money" fieldname="precio" required="true"/>
+        </column>
+        <column name="creation-date" display="none" order="170">
+            <widget type="datetime" fieldname="creation_date" required="true"/>
+        </column>
+        <column name="user" order="180">
+            <widget type="select" fieldname="nick">
+                <values source="users" fieldcode="nick" fieldtile="nick"/>
+            </widget>
+        </column>
+        <column name="last-update" display="none" order="190">
+            <widget type="datetime" fieldname="last_update"/>
+        </column>
+        <column name="last-user" order="200">
+            <widget type="select" fieldname="last_nick">
+                <values source="users" fieldcode="nick" fieldtile="nick"/>
+            </widget>
+        </column>
+    </columns>
+    <rows>
+        <row type="status">
+            <option color="warning" fieldname="cantidad_disp" title="Agotado">0</option>
+        </row>
+    </rows>
+</view>

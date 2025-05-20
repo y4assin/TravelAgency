@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <group name="data" numcolumns="12">
+            <column name="id" display="none" order="110">
+                <widget type="text" fieldname="id" readonly="true"/>
+            </column>
+
+            <column name="Reserva" display="left" order="120">
+                <widget type="autocomplete" fieldname="reserva_id" onclick="EditReserva" required="true">
+                    <values source="ta_reservas" fieldcode="id" fieldtitle="name"/>
+                </widget>
+            </column>
+
+            <column name="Tipo" display="left" order="120">
+                <widget type="select" fieldname="habitacion_id" onclick="EditHabitacionesPaquete" required="true">
+                </widget>
+            </column>
+            <column name="Pasajero" display="left" order="130">
+                <widget type="select" fieldname="pasajero_id" onclick="EditPasajero" required="true">
+                </widget>
+            </column>
+        </group>
+
+        <group name="logs" numcolumns="12" title="Auditoría">
+            <column name="creation-date" order="200">
+                <widget type="datetime" fieldname="creation_date" readonly="true"/>
+            </column>
+            <column name="user" order="210">
+                <widget type="select" fieldname="nick" readonly="true">
+                    <values source="users" fieldcode="nick" fieldtile="nick"/>
+                </widget>
+            </column>
+            <column name="last-update" order="220">
+                <widget type="datetime" fieldname="last_update" readonly="true"/>
+            </column>
+            <column name="last-user" order="230">
+                <widget type="select" fieldname="last_nick" readonly="true">
+                    <values source="users" fieldcode="nick" fieldtile="nick"/>
+                </widget>
+            </column>
+        </group>
+    </columns>
+</view>

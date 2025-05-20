@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <column name="id" display="none" order="110">
+            <widget type="text" fieldname="id" readonly="true"/>
+        </column>
+        <column name="Tratamiento" display="left" order="120">
+            <widget type="select" fieldname="tratamiento" required="true">
+                <values title="Sr.">Sr.</values>
+                <values title="Sra.">Sra.</values>
+                <values title="Srta.">Srta.</values>
+                <values title="Dr.">Dr.</values>
+                <values title="Dra.">Dra.</values>
+            </widget>
+        </column>
+        <column name="name" display="" order="130">
+            <widget type="text" fieldname="name" maxlength="100"/>
+        </column>
+        <column name="Nro Pasaporte" display="left" order="140">
+            <widget type="text" fieldname="num_pasaporte" />
+        </column>
+        <column name="Validez Pasaporte" display="left" order="150">
+            <widget type="date" fieldname="validez_pasaporte"/>
+        </column>
+        <column name="Fecha nacimiento" display="left" order="160">
+            <widget type="date" fieldname="fecha_nacimiento"/>
+        </column>
+        <column name="Nacionalidad" display="left" order="170">
+            <widget type="select" fieldname="nacionalidad" required="true">
+                <values title="Afganistán">Afgano</values>
+<values title="Albania">Albanés</values>
+<values title="Alemania">Alemán</values>
+<values title="Andorra">Andorrano</values>
+<values title="Angola">Angoleño</values>
+<values title="Antigua y Barbuda">Antiguano</values>
+<values title="Arabia Saudita">Saudí</values>
+<values title="Argelia">Argelino</values>
+<values title="Argentina">Argentino</values>
+<values title="Armenia">Armenio</values>
+<values title="Australia">Australiano</values>
+<values title="Austria">Austriaco</values>
+<values title="Azerbaiyán">Azerbaiyano</values>
+<values title="Bahamas">Bahameño</values>
+<values title="Bangladés">Bangladesí</values>
+<values title="Barbados">Barbadense</values>
+<values title="Baréin">Bareiní</values>
+<values title="Bélgica">Belga</values>
+<values title="Belice">Beliceño</values>
+<values title="Benín">Beninés</values>
+<values title="Bielorrusia">Bielorruso</values>
+<values title="Birmania">Birmano</values>
+<values title="Bolivia">Boliviano</values>
+<values title="Bosnia y Herzegovina">Bosnio</values>
+<values title="Botsuana">Botsuano</values>
+<values title="Brasil">Brasileño</values>
+<values title="Brunéi">Bruneano</values>
+<values title="Bulgaria">Búlgaro</values>
+<values title="Burkina Faso">Burkinés</values>
+<values title="Burundi">Burundés</values>
+<values title="Bután">Butanés</values>
+<values title="Cabo Verde">Caboverdiano</values>
+<values title="Camboya">Camboyano</values>
+<values title="Camerún">Camerunés</values>
+<values title="Canadá">Canadiense</values>
+<values title="Catar">Catarí</values>
+<values title="Chad">Chadiano</values>
+<values title="Chile">Chileno</values>
+<values title="China">Chino</values>
+<values title="Chipre">Chipriota</values>
+<values title="Colombia">Colombiano</values>
+<values title="Comoras">Comorense</values>
+<values title="Corea del Norte">Norcoreano</values>
+<values title="Corea del Sur">Surcoreano</values>
+<values title="Costa de Marfil">Marfileño</values>
+<values title="Costa Rica">Costarricense</values>
+<values title="Croacia">Croata</values>
+<values title="Cuba">Cubano</values>
+<values title="Dinamarca">Danés</values>
+<values title="Dominica">Dominiqués</values>
+<values title="Ecuador">Ecuatoriano</values>
+<values title="Egipto">Egipcio</values>
+<values title="El Salvador">Salvadoreño</values>
+<values title="Emiratos Árabes Unidos">Emiratí</values>
+<values title="Eritrea">Eritreo</values>
+<values title="Eslovaquia">Eslovaco</values>
+<values title="Eslovenia">Esloveno</values>
+<values title="España">Español</values>
+<values title="Estados Unidos">Estadounidense</values>
+<values title="Estonia">Estonio</values>
+<values title="Etiopía">Etíope</values>
+<values title="Filipinas">Filipino</values>
+<values title="Finlandia">Finlandés</values>
+<values title="Francia">Francés</values>
+<values title="Gabón">Gabonés</values>
+<values title="Gambia">Gambiano</values>
+<values title="Georgia">Georgiano</values>
+<values title="Ghana">Ghanés</values>
+<values title="Granada">Granadino</values>
+<values title="Grecia">Griego</values>
+<values title="Guatemala">Guatemalteco</values>
+<values title="Guinea">Guineano</values>
+<values title="Guinea-Bisáu">Guineano</values>
+<values title="Guinea Ecuatorial">Ecuatoguineano</values>
+<values title="Guyana">Guyanés</values>
+<values title="Haití">Haitiano</values>
+<values title="Honduras">Hondureño</values>
+<values title="Hungría">Húngaro</values>
+<values title="India">Indio</values>
+<values title="Indonesia">Indonesio</values>
+<values title="Irak">Iraquí</values>
+<values title="Irán">Iraní</values>
+<values title="Irlanda">Irlandés</values>
+<values title="Islandia">Islandés</values>
+<values title="Islas Marshall">Marshalés</values>
+<values title="Islas Salomón">Salomonense</values>
+<values title="Israel">Israelí</values>
+<values title="Italia">Italiano</values>
+<values title="Jamaica">Jamaicano</values>
+<values title="Japón">Japonés</values>
+<values title="Jordania">Jordano</values>
+<values title="Kazajistán">Kazajo</values>
+<values title="Kenia">Keniano</values>
+<values title="Kirguistán">Kirguís</values>
+<values title="Kiribati">Kiribatiano</values>
+<values title="Kuwait">Kuwaití</values>
+<values title="Laos">Laosiano</values>
+<values title="Lesoto">Lesotense</values>
+<values title="Letonia">Letón</values>
+<values title="Líbano">Libanés</values>
+<values title="Liberia">Liberiano</values>
+<values title="Libia">Libio</values>
+<values title="Liechtenstein">Liechtensteiniano</values>
+<values title="Lituania">Lituano</values>
+<values title="Luxemburgo">Luxemburgués</values>
+<values title="Madagascar">Malgache</values>
+<values title="Malasia">Malasio</values>
+<values title="Malaui">Malauí</values>
+<values title="Maldivas">Maldivo</values>
+<values title="Malí">Maliense</values>
+<values title="Malta">Maltés</values>
+<values title="Marruecos">Marroquí</values>
+<values title="Mauricio">Mauriciano</values>
+<values title="Mauritania">Mauritano</values>
+<values title="México">Mexicano</values>
+<values title="Micronesia">Micronesio</values>
+<values title="Moldavia">Moldavo</values>
+<values title="Mónaco">Monegasco</values>
+<values title="Mongolia">Mongol</values>
+<values title="Montenegro">Montenegrino</values>
+<values title="Mozambique">Mozambiqueño</values>
+<values title="Namibia">Namibio</values>
+<values title="Nauru">Nauruano</values>
+<values title="Nepal">Nepalí</values>
+<values title="Nicaragua">Nicaragüense</values>
+<values title="Níger">Nigerino</values>
+<values title="Nigeria">Nigeriano</values>
+<values title="Noruega">Noruego</values>
+<values title="Nueva Zelanda">Neozelandés</values>
+<values title="Omán">Omaní</values>
+<values title="Países Bajos">Neerlandés</values>
+<values title="Pakistán">Pakistaní</values>
+<values title="Palaos">Palauano</values>
+<values title="Palestina">Palestino</values>
+<values title="Panamá">Panameño</values>
+<values title="Papúa Nueva Guinea">Papú</values>
+<values title="Paraguay">Paraguayo</values>
+<values title="Perú">Peruano</values>
+<values title="Polonia">Polaco</values>
+<values title="Portugal">Portugués</values>
+<values title="Reino Unido">Británico</values>
+<values title="República Centroafricana">Centroafricano</values>
+<values title="República Checa">Checo</values>
+<values title="República Dominicana">Dominicano</values>
+<values title="Ruanda">Ruandés</values>
+<values title="Rumanía">Rumano</values>
+<values title="Rusia">Ruso</values>
+<values title="San Cristóbal y Nieves">Sancristobaleño</values>
+<values title="San Marino">Sanmarinense</values>
+<values title="San Vicente y las Granadinas">Sanvicentino</values>
+<values title="Santa Lucía">Santalucense</values>
+<values title="Santo Tomé y Príncipe">Santotomense</values>
+<values title="Senegal">Senegalés</values>
+<values title="Serbia">Serbio</values>
+<values title="Seychelles">Seychelense</values>
+<values title="Sierra Leona">Sierraleonés</values>
+<values title="Singapur">Singapurense</values>
+<values title="Siria">Sirio</values>
+<values title="Somalia">Somalí</values>
+<values title="Sri Lanka">Ceilanés</values>
+<values title="Sudáfrica">Sudafricano</values>
+<values title="Sudán">Sudanés</values>
+ 
+            </widget>
+        </column>
+        <column name="creation-date" order="200">
+            <widget type="datetime" fieldname="creation_date" required="true"/>
+        </column>
+        <column name="user" display="none" order="210">
+            <widget type="select" fieldname="nick">
+                <values source="users" fieldcode="nick" fieldtile="nick"/>
+            </widget>
+        </column>
+        <column name="last-update" display="none" order="220">
+            <widget type="datetime" fieldname="last_update"/>
+        </column>
+        <column name="last-user" display="none" order="230">
+            <widget type="select" fieldname="last_nick">
+                <values source="users" fieldcode="nick" fieldtile="nick"/>
+            </widget>
+        </column>
+    </columns>
+</view>
